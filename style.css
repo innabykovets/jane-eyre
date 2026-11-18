@@ -1,0 +1,603 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    background: #f7f1e8;
+    color: #3d3028;
+    line-height: 1.7;
+}
+
+header {
+    min-height: 390px;
+    padding: 90px 20px;
+    text-align: center;
+    color: #fff8ed;
+    background: linear-gradient(135deg, #49372d, #80614b, #a98768);
+}
+
+.eyebrow {
+    margin-bottom: 15px;
+    color: #e9d5bb;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+header h1 {
+    margin-bottom: 15px;
+    font-size: clamp(38px, 7vw, 65px);
+    font-weight: normal;
+}
+
+header p {
+    font-size: 19px;
+}
+
+.header-button {
+    display: inline-block;
+    margin-top: 28px;
+    padding: 12px 27px;
+    border: 1px solid #f4dfc4;
+    border-radius: 30px;
+    color: #fff8ed;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.header-button:hover {
+    background: #fff8ed;
+    color: #49372d;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 14px 12px;
+    background: #49372d;
+    box-shadow: 0 3px 12px #0002;
+}
+
+nav a {
+    padding: 7px 12px;
+    border-radius: 20px;
+    color: #fff8ed;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.25s;
+}
+
+nav a:hover {
+    background: #a98768;
+}
+
+main {
+    width: min(1100px, 92%);
+    margin: 35px auto;
+}
+
+section {
+    margin-bottom: 35px;
+    padding: 35px;
+    border: 1px solid #e4d4c1;
+    border-radius: 18px;
+    background: #fffaf3;
+    box-shadow: 0 5px 18px #49372d0d;
+}
+
+section h2 {
+    margin-bottom: 22px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #d9bea0;
+    color: #684b38;
+    font-size: 28px;
+    font-weight: normal;
+}
+
+section p {
+    margin-bottom: 13px;
+}
+
+.quick-facts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.quick-facts div {
+    padding: 18px;
+    border-radius: 12px;
+    background: #efe3d3;
+    text-align: center;
+}
+
+.character-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 12px;
+    margin-bottom: 22px;
+}
+
+.character-list button {
+    padding: 13px;
+    border: 1px solid #b99a7b;
+    border-radius: 10px;
+    background: #efe3d3;
+    color: #49372d;
+    font-family: inherit;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.character-list button:hover,
+.character-list button:focus-visible {
+    background: #80614b;
+    color: white;
+    transform: translateY(-3px);
+}
+
+#character-info {
+    min-height: 90px;
+    padding: 20px;
+    border-left: 4px solid #a98768;
+    border-radius: 8px;
+    background: #f2e8dc;
+}
+
+.relationship-map {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 25px 10px;
+}
+
+.person {
+    position: relative;
+    z-index: 2;
+    min-width: 150px;
+    padding: 12px 20px;
+    border: 1px solid #b99a7b;
+    border-radius: 25px;
+    background: #efe3d3;
+    color: #49372d;
+    font-family: inherit;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.person:hover {
+    background: #80614b;
+    color: white;
+    transform: scale(1.05);
+}
+
+.jane-person {
+    border: 2px solid #80614b;
+    background: #80614b;
+    color: white;
+    font-weight: bold;
+}
+
+.connections {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    width: 100%;
+}
+
+.line {
+    width: 100%;
+    height: 3px;
+    border-radius: 5px;
+}
+
+.line.love {
+    background: #a75b5b;
+}
+
+.line.friendship {
+    background: #66836b;
+}
+
+.line.conflict {
+    background: #806b9b;
+}
+
+.line.family {
+    background: #bd9258;
+}
+
+.legend {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.legend-color {
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    margin-right: 5px;
+    border-radius: 50%;
+}
+
+.legend-color.love {
+    background: #a75b5b;
+}
+
+.legend-color.friendship {
+    background: #66836b;
+}
+
+.legend-color.conflict {
+    background: #806b9b;
+}
+
+.legend-color.family {
+    background: #bd9258;
+}
+
+.themes-list,
+.facts-list,
+.symbols-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+}
+
+.theme,
+.fact-card,
+.symbol-card,
+.timeline-content,
+.chart-item {
+    padding: 20px;
+    border: 1px solid #e2d0ba;
+    border-radius: 12px;
+    background: #f5ecdf;
+}
+
+.theme h3,
+.fact-card h3,
+.symbol-card h3,
+.timeline-content h3 {
+    margin-bottom: 8px;
+    color: #76543d;
+}
+
+.interactive-card {
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.interactive-card:hover,
+.interactive-card:focus-visible {
+    border-color: #a98768;
+    background: #ead9c5;
+    transform: translateY(-4px);
+    box-shadow: 0 7px 16px #49372d18;
+}
+
+.fact-number {
+    display: block;
+    margin-bottom: 8px;
+    color: #a98768;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.symbol-icon {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 32px;
+}
+
+.timeline {
+    display: grid;
+    gap: 18px;
+}
+
+.timeline-item {
+    display: grid;
+    grid-template-columns: 55px 1fr;
+    align-items: start;
+    gap: 15px;
+}
+
+.timeline-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: #80614b;
+    color: white;
+    font-size: 18px;
+}
+
+.symbol-chart {
+    display: grid;
+    gap: 18px;
+}
+
+.chart-item {
+    display: grid;
+    gap: 9px;
+}
+
+.chart-line {
+    height: 13px;
+    overflow: hidden;
+    border-radius: 20px;
+    background: #e3d8ca;
+}
+
+.chart-fill {
+    height: 100%;
+    border-radius: 20px;
+    transition: width 0.8s ease;
+}
+
+.red-fill {
+    background: #a75b5b;
+}
+
+.purple-fill {
+    background: #806b9b;
+}
+
+.orange-fill {
+    background: #bd9258;
+}
+
+.blue-fill {
+    background: #66838a;
+}
+
+.chart-note {
+    margin-top: 15px;
+    color: #786b60;
+    font-size: 14px;
+}
+
+footer {
+    padding: 30px 15px;
+    background: #49372d;
+    color: #fff8ed;
+    text-align: center;
+}
+
+#back-to-top {
+    position: fixed;
+    right: 22px;
+    bottom: 22px;
+    z-index: 30;
+    display: none;
+    width: 48px;
+    height: 48px;
+    border: none;
+    border-radius: 50%;
+    background: #80614b;
+    color: white;
+    font-size: 23px;
+    cursor: pointer;
+    box-shadow: 0 3px 12px #0003;
+}
+
+#back-to-top.visible {
+    display: block;
+}
+
+#back-to-top:hover {
+    background: #49372d;
+}
+
+.modal {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.modal.is-open {
+    display: flex;
+}
+
+.modal-backdrop {
+    position: absolute;
+    inset: 0;
+    background: #241a15b8;
+}
+
+.modal-dialog {
+    position: relative;
+    z-index: 2;
+    width: min(550px, 100%);
+    max-height: 80vh;
+    overflow-y: auto;
+    padding: 30px;
+    border-radius: 16px;
+    background: #fffaf3;
+    box-shadow: 0 10px 40px #0004;
+}
+
+.modal-dialog h2 {
+    margin-bottom: 15px;
+    color: #684b38;
+}
+
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    border: none;
+    background: transparent;
+    color: #49372d;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.modal-done {
+    margin-top: 22px;
+    padding: 10px 22px;
+    border: none;
+    border-radius: 22px;
+    background: #80614b;
+    color: white;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.modal-done:hover {
+    background: #49372d;
+}
+
+button:focus-visible,
+a:focus-visible,
+.interactive-card:focus-visible {
+    outline: 3px solid #bd9258;
+    outline-offset: 3px;
+}
+
+@media (max-width: 650px) {
+    header {
+        min-height: 300px;
+        padding: 65px 15px;
+    }
+
+    nav {
+        gap: 4px;
+        padding: 9px 5px;
+    }
+
+    nav a {
+        padding: 6px 8px;
+        font-size: 12px;
+    }
+
+    main {
+        width: 94%;
+        margin: 20px auto;
+    }
+
+    section {
+        padding: 22px 17px;
+        margin-bottom: 20px;
+    }
+
+    section h2 {
+        font-size: 23px;
+    }
+
+    .timeline-item {
+        grid-template-columns: 40px 1fr;
+        gap: 10px;
+    }
+
+    .timeline-number {
+        width: 36px;
+        height: 36px;
+    }
+
+    .modal-dialog {
+        padding: 25px 20px;
+    }
+}
+
+/* Діаграма рис характеру Джейн Ейр */
+
+.trait-chart {
+    display: grid;
+    gap: 22px;
+    margin-top: 25px;
+}
+
+.trait-item {
+    padding: 18px;
+    border: 1px solid #e2d0ba;
+    border-radius: 12px;
+    background: #f5ecdf;
+}
+
+.trait-heading {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 10px;
+    color: #684b38;
+}
+
+.trait-heading strong {
+    color: #80614b;
+}
+
+.trait-track {
+    width: 100%;
+    height: 16px;
+    overflow: hidden;
+    border-radius: 20px;
+    background: #e3d8ca;
+}
+
+.trait-fill {
+    height: 100%;
+    border-radius: 20px;
+    animation: trait-grow 1.2s ease forwards;
+}
+
+.trait-one {
+    width: 95%;
+    background: #80614b;
+}
+
+.trait-two {
+    width: 90%;
+    background: #a75b5b;
+}
+
+.trait-three {
+    width: 85%;
+    background: #66836b;
+}
+
+.trait-four {
+    width: 90%;
+    background: #806b9b;
+}
+
+.trait-five {
+    width: 95%;
+    background: #bd9258;
+}
+
+@keyframes trait-grow {
+    from {
+        width: 0;
+    }
+}

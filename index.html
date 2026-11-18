@@ -1,0 +1,461 @@
+
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Інтерактивний літературний аналіз роману Джейн Ейр">
+    <title>Jane Eyre — Літературний аналіз</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header id="top">
+    <p class="eyebrow">Літературний інтерактивний проєкт</p>
+    <h1>Jane Eyre</h1>
+    <p>Літературний світ Шарлотти Бронте</p>
+    <a href="#about" class="header-button">Почати знайомство ↓</a>
+</header>
+
+<nav>
+    <a href="#about">Про роман</a>
+    <a href="#characters">Персонажі</a>
+    <a href="#relationships">Взаємини</a>
+    <a href="#themes">Теми</a>
+    <a href="#facts">Факти</a>
+    <a href="#symbols">Символи</a>
+    <a href="#timeline">Життєвий шлях</a>
+    <a href="#symbol-diagram">Діаграма</a>
+</nav>
+
+<main>
+
+    <!-- ПРО РОМАН -->
+    <section id="about">
+        <h2>Про роман</h2>
+        <p>
+            «Джейн Ейр» — роман англійської письменниці
+            Шарлотти Бронте, опублікований у 1847 році.
+            У творі розповідається про життя Джейн,
+            її пошуки кохання, свободи та незалежності.
+        </p>
+
+        <div class="quick-facts">
+            <div><span>Авторка</span><strong>Шарлотта Бронте</strong></div>
+            <div><span>Рік видання</span><strong>1847</strong></div>
+            <div><span>Жанр</span><strong>Роман виховання</strong></div>
+        </div>
+    </section>
+
+    <!-- ПЕРСОНАЖІ -->
+    <section id="characters">
+        <h2>Персонажі роману</h2>
+        <p>Натисніть на ім'я персонажа, щоб дізнатися більше.</p>
+
+        <div class="character-list">
+            <button data-character="jane">Джейн Ейр</button>
+            <button data-character="rochester">Едвард Рочестер</button>
+            <button data-character="bertha">Берта Мейсон</button>
+            <button data-character="helen">Гелен Бернс</button>
+            <button data-character="stjohn">Сент-Джон Ріверс</button>
+            <button data-character="reed">Місіс Рід</button>
+            <button data-character="diana">Діана Ріверс</button>
+            <button data-character="mary">Мері Ріверс</button>
+        </div>
+
+        <div id="character-info">
+            <p>Оберіть персонажа, щоб побачити його характеристику.</p>
+        </div>
+    </section>
+
+    <!-- ВЗАЄМИНИ -->
+    <section id="relationships">
+        <h2>Схема взаємин персонажів</h2>
+        <p>
+            Джейн Ейр перебуває в центрі історії.
+            Її життя пов'язане з різними людьми,
+            які впливають на її характер і долю.
+        </p>
+
+        <div class="relationship-map">
+
+            <button class="person jane-person" data-character="jane">
+                <span>✦</span>
+                <strong>Джейн Ейр</strong>
+                <small>Головна героїня</small>
+            </button>
+
+            <div class="connections">
+
+                <button class="person" data-character="rochester">
+                    <span class="line love"></span>
+                    <strong>Едвард Рочестер</strong>
+                    <small>Кохання</small>
+                </button>
+
+                <button class="person" data-character="helen">
+                    <span class="line friendship"></span>
+                    <strong>Гелен Бернс</strong>
+                    <small>Дружба</small>
+                </button>
+
+                <button class="person" data-character="reed">
+                    <span class="line conflict"></span>
+                    <strong>Місіс Рід</strong>
+                    <small>Конфлікт</small>
+                </button>
+
+                <button class="person" data-character="stjohn">
+                    <span class="line family"></span>
+                    <strong>Сент-Джон Ріверс</strong>
+                    <small>Родинний зв'язок</small>
+                </button>
+
+                <button class="person" data-character="diana">
+                    <span class="line friendship"></span>
+                    <strong>Діана Ріверс</strong>
+                    <small>Дружба і спорідненість</small>
+                </button>
+
+                <button class="person" data-character="mary">
+                    <span class="line friendship"></span>
+                    <strong>Мері Ріверс</strong>
+                    <small>Дружба і спорідненість</small>
+                </button>
+
+                <button class="person" data-character="bertha">
+                    <span class="line conflict"></span>
+                    <strong>Берта Мейсон</strong>
+                    <small>Важлива перешкода в сюжеті</small>
+                </button>
+
+            </div>
+        </div>
+
+        <div class="legend">
+            <p><span class="legend-color love-color"></span> Кохання</p>
+            <p><span class="legend-color friendship-color"></span> Дружба</p>
+            <p><span class="legend-color conflict-color"></span> Конфлікт</p>
+            <p><span class="legend-color family-color"></span> Родинні зв'язки</p>
+        </div>
+    </section>
+
+    <!-- ТЕМИ -->
+    <section id="themes">
+        <h2>Основні теми роману</h2>
+        <p>Натисніть на картку, щоб прочитати більше.</p>
+
+        <div class="themes-list">
+
+            <button class="theme interactive-card" data-detail="love">
+                <h3>Кохання</h3>
+                <p>Почуття Джейн і Рочестера та їхні випробування.</p>
+                <span>Дізнатися більше →</span>
+            </button>
+
+            <button class="theme interactive-card" data-detail="independence">
+                <h3>Незалежність</h3>
+                <p>Прагнення Джейн самостійно вирішувати власну долю.</p>
+                <span>Дізнатися більше →</span>
+            </button>
+
+            <button class="theme interactive-card" data-detail="equality">
+                <h3>Соціальна нерівність</h3>
+                <p>Різниця в суспільному становищі персонажів.</p>
+                <span>Дізнатися більше →</span>
+            </button>
+
+            <button class="theme interactive-card" data-detail="choice">
+                <h3>Моральний вибір</h3>
+                <p>Вірність власним переконанням і принципам.</p>
+                <span>Дізнатися більше →</span>
+            </button>
+
+        </div>
+    </section>
+
+    <!-- ЦІКАВІ ФАКТИ -->
+    <section id="facts">
+        <h2>Цікаві факти про роман</h2>
+        <p>Натисніть на картку, щоб відкрити додаткову інформацію.</p>
+
+        <div class="facts-list">
+
+            <button class="fact-card" data-detail="year">
+                <span class="fact-number">1847</span>
+                <h3>Рік публікації</h3>
+                <p>Роман уперше опублікували у 1847 році.</p>
+                <span>Відкрити факт →</span>
+            </button>
+
+            <button class="fact-card" data-detail="author">
+                <span class="fact-number">01</span>
+                <h3>Авторка</h3>
+                <p>Шарлотта Бронте — англійська письменниця XIX століття.</p>
+                <span>Відкрити факт →</span>
+            </button>
+
+            <button class="fact-card" data-detail="penname">
+                <span class="fact-number">Currer Bell</span>
+                <h3>Псевдонім</h3>
+                <p>Спочатку роман вийшов під псевдонімом Каррер Белл.</p>
+                <span>Відкрити факт →</span>
+            </button>
+
+            <button class="fact-card" data-detail="narration">
+                <span class="fact-number">I</span>
+                <h3>Розповідь від першої особи</h3>
+                <p>Події подані від імені самої Джейн.</p>
+                <span>Відкрити факт →</span>
+            </button>
+
+            <button class="fact-card" data-detail="stages">
+                <span class="fact-number">5</span>
+                <h3>Етапи життя</h3>
+                <p>Історія охоплює різні періоди життя героїні.</p>
+                <span>Відкрити факт →</span>
+            </button>
+
+            <button class="fact-card" data-detail="genre">
+                <span class="fact-number">★</span>
+                <h3>Особливість твору</h3>
+                <p>У романі поєднано кілька літературних рис.</p>
+                <span>Відкрити факт →</span>
+            </button>
+
+        </div>
+    </section>
+
+    <!-- СИМВОЛИ -->
+    <section id="symbols">
+        <h2>Символи роману</h2>
+        <p>
+            У романі Шарлотти Бронте важливу роль відіграють
+            символи, які допомагають розкрити внутрішній світ
+            героїв та головні ідеї твору.
+        </p>
+
+        <div class="symbols-list">
+
+            <button class="symbol-card" data-detail="redroom">
+                <span class="symbol-icon">🚪</span>
+                <h3>Червона кімната</h3>
+                <p>Страх, самотність і несправедливість.</p>
+                <span>Розкрити символ →</span>
+            </button>
+
+            <button class="symbol-card" data-detail="thornfield">
+                <span class="symbol-icon">🏰</span>
+                <h3>Торнфілд</h3>
+                <p>Таємниці, випробування та приховані почуття.</p>
+                <span>Розкрити символ →</span>
+            </button>
+
+            <button class="symbol-card" data-detail="fire">
+                <span class="symbol-icon">🔥</span>
+                <h3>Вогонь</h3>
+                <p>Пристрасть, сильні емоції та зміни.</p>
+                <span>Розкрити символ →</span>
+            </button>
+
+            <button class="symbol-card" data-detail="birds">
+                <span class="symbol-icon">🐦</span>
+                <h3>Птахи</h3>
+                <p>Свобода, незалежність і прагнення до власного шляху.</p>
+                <span>Розкрити символ →</span>
+            </button>
+
+        </div>
+    </section>
+
+    <!-- ХРОНОЛОГІЯ -->
+    <section id="timeline">
+        <h2>Життєвий шлях Джейн Ейр</h2>
+        <p>Натисніть на етап, щоб прочитати його детальніший опис.</p>
+
+        <div class="timeline">
+
+            <button class="timeline-item" data-detail="gateshead">
+                <span class="timeline-number">01</span>
+                <span class="timeline-content">
+                    <strong>Дитинство в Гейтсгеді</strong>
+                    <small>Життя в домі місіс Рід.</small>
+                </span>
+            </button>
+
+            <button class="timeline-item" data-detail="lowood">
+                <span class="timeline-number">02</span>
+                <span class="timeline-content">
+                    <strong>Ловудська школа</strong>
+                    <small>Навчання та дружба з Гелен Бернс.</small>
+                </span>
+            </button>
+
+            <button class="timeline-item" data-detail="thornfieldlife">
+                <span class="timeline-number">03</span>
+                <span class="timeline-content">
+                    <strong>Робота в Торнфілді</strong>
+                    <small>Знайомство з Едвардом Рочестером.</small>
+                </span>
+            </button>
+
+            <button class="timeline-item" data-detail="moorhouse">
+                <span class="timeline-number">04</span>
+                <span class="timeline-content">
+                    <strong>Нове життя</strong>
+                    <small>Знайомство з родичами та отримання спадщини.</small>
+                </span>
+            </button>
+
+            <button class="timeline-item" data-detail="return">
+                <span class="timeline-number">05</span>
+                <span class="timeline-content">
+                    <strong>Повернення до Рочестера</strong>
+                    <small>Пошук особистого щастя.</small>
+                </span>
+            </button>
+
+        </div>
+    </section>
+
+    <!-- ДІАГРАМА -->
+    <section id="symbol-diagram">
+        <h2>Що символізують образи роману?</h2>
+        <p>
+            Натисніть на смугу діаграми, щоб побачити
+            пояснення символу. Довжина смуг декоративна,
+            а не є статистичною оцінкою.
+        </p>
+
+        <div class="symbol-chart">
+
+            <button class="chart-item" data-detail="redroom">
+                <strong>🚪 Червона кімната</strong>
+                <span class="chart-line">
+                    <span class="chart-fill red-fill"></span>
+                </span>
+                <small>Страх, самотність і несправедливість</small>
+            </button>
+
+            <button class="chart-item" data-detail="thornfield">
+                <strong>🏰 Торнфілд</strong>
+                <span class="chart-line">
+                    <span class="chart-fill purple-fill"></span>
+                </span>
+                <small>Таємниці, випробування та кохання</small>
+            </button>
+
+            <button class="chart-item" data-detail="fire">
+                <strong>🔥 Вогонь</strong>
+                <span class="chart-line">
+                    <span class="chart-fill orange-fill"></span>
+                </span>
+                <small>Пристрасть, емоції та зміни</small>
+            </button>
+
+            <button class="chart-item" data-detail="birds">
+                <strong>🐦 Птахи</strong>
+                <span class="chart-line">
+                    <span class="chart-fill blue-fill"></span>
+                </span>
+                <small>Свобода та незалежність</small>
+            </button>
+
+        </div>
+
+<section id="character-chart">
+    <h2>Риси характеру Джейн Ейр</h2>
+    <p>Основні риси, які визначають особистість головної героїні.</p>
+
+    <div class="trait-chart">
+        <div class="trait-item interactive-card" data-detail="trait-independence">
+            <div class="trait-heading">
+                <span>Незалежність</span>
+                <strong>95%</strong>
+            </div>
+            <div class="trait-track">
+                <div class="trait-fill trait-one"></div>
+            </div>
+        </div>
+
+        <div class="trait-item interactive-card" data-detail="trait-courage">
+            <div class="trait-heading">
+                <span>Сміливість</span>
+                <strong>90%</strong>
+            </div>
+            <div class="trait-track">
+                <div class="trait-fill trait-two"></div>
+            </div>
+        </div>
+
+        <div class="trait-item interactive-card" data-detail="trait-kindness">
+            <div class="trait-heading">
+                <span>Доброта</span>
+                <strong>85%</strong>
+            </div>
+            <div class="trait-track">
+                <div class="trait-fill trait-three"></div>
+            </div>
+        </div>
+
+        <div class="trait-item interactive-card" data-detail="trait-intelligence">
+            <div class="trait-heading">
+                <span>Розум</span>
+                <strong>90%</strong>
+            </div>
+            <div class="trait-track">
+                <div class="trait-fill trait-four"></div>
+            </div>
+        </div>
+
+        <div class="trait-item interactive-card" data-detail="trait-principles">
+            <div class="trait-heading">
+                <span>Принциповість</span>
+                <strong>95%</strong>
+            </div>
+            <div class="trait-track">
+                <div class="trait-fill trait-five"></div>
+            </div>
+        </div>
+    </div>
+
+    <p class="chart-note">* Показники є умовною ілюстративною оцінкою рис героїні, а не результатом вимірювання.</p>
+</section>
+
+    </section>
+
+</main>
+
+<footer>
+    <p>Творча робота за романом Шарлотти Бронте «Джейн Ейр»</p>
+    <a href="#top">Повернутися нагору ↑</a>
+</footer>
+
+<!-- КНОПКА НАГОРУ -->
+<button id="back-to-top" aria-label="Повернутися нагору">↑</button>
+
+<!-- СПЛИВАЮЧЕ ВІКНО -->
+<div class="modal" id="detail-modal" aria-hidden="true">
+
+    <div class="modal-backdrop" data-close-modal></div>
+
+    <div class="modal-dialog" role="dialog" aria-modal="true">
+
+        <button class="modal-close" data-close-modal aria-label="Закрити">×</button>
+
+        <h2 id="modal-title">Детальніше</h2>
+
+        <div id="modal-text"></div>
+
+        <button class="modal-done" data-close-modal>
+            Зрозуміло
+        </button>
+
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
